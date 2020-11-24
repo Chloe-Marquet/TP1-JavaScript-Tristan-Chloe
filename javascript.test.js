@@ -8,15 +8,15 @@ describe('La fonction anagramme', () => {
     });
 
     test('doit valider deux phrases anagrammes.', () => {
-        expect(anagrams('hello', 'llohe')).toBeTruthy();
-        expect(anagrams('Whoa! Hi!', 'Hi! Whoa!')).toBeTruthy();
-        expect(anagrams('RAIL! SAFETY!', 'fairy tales')).toBeTruthy();
+        expect(anagrammes('hello', 'llohe')).toBeTruthy();
+        expect(anagrammes('Whoa! Hi!', 'Hi! Whoa!')).toBeTruthy();
+        expect(anagrammes('RAIL! SAFETY!', 'fairy tales')).toBeTruthy();
     });
 
     test('doit refuser deux phrass qui ne sont pas des anagrammes.', () => {
-        expect(anagrams('One One', 'Two two two')).toBeFalsy();
-        expect(anagrams('One one', 'One one c')).toBeFalsy();
-        expect(anagrams('A tree, a life, a bench', 'A tree, a fence, a yard')).toBeFalsy();
+        expect(anagrammes('One One', 'Two two two')).toBeFalsy();
+        expect(anagrammes('One one', 'One one c')).toBeFalsy();
+        expect(anagrammes('A tree, a life, a bench', 'A tree, a fence, a yard')).toBeFalsy();
     });
 });
 
@@ -59,7 +59,7 @@ describe('La classe Stack', () => {
 });
 
 
-describe('La fonction matrice', () => {
+/*describe('La fonction matrice', () => {
     test('doit exister', () => {
         expect(spirale).toBeDefined();
         expect(typeof spirale).toEqual('function');
@@ -88,10 +88,10 @@ describe('La fonction matrice', () => {
         expect(m[2]).toEqual([11, 16, 15, 6]);
         expect(m[3]).toEqual([10, 9, 8, 7]);
     });
-});
+});*/
 
 
-describe('La fonction FizzBuzz', () => {
+/*describe('La fonction FizzBuzz', () => {
     beforeEach(() => {
         jest.spyOn(console, 'log');
     });
@@ -130,7 +130,7 @@ describe('La fonction FizzBuzz', () => {
         expect(console.log.mock.calls[13][0]).toEqual(14);
         expect(console.log.mock.calls[14][0]).toEqual('fizzbuzz');
     });
-});
+});*/
 
 
 describe('La fonction puissance4', () => {

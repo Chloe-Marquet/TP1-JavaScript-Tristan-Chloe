@@ -1,4 +1,14 @@
 const anagrammes = (stringA, stringB) => {
+
+    let regex = /!/gi;
+    let sA = stringA.replace(regex,'').split('').sort().join('').toLowerCase();
+    let sB = stringB.replace(regex,'').split('').sort().join('').toLowerCase();
+
+    if (sA.length !== sB.length || sA.localeCompare(sB) !== 0) {
+        return false;
+    }
+    return true;
+
     /**
      * stringA est égale à stringB si et seulement s'ils partagent les mêmes
      * caractères alphabétiques dans la même quantité.
@@ -15,6 +25,31 @@ const anagrammes = (stringA, stringB) => {
 
 
 class Stack {
+
+    constructor() {
+        this.tab = [];
+    }
+
+    //const myTab = new Stack(1,90,21,5);
+
+    push = (value) => {
+        let size = this.tab.length;
+        this.tab[size] = value;
+    }
+
+    pop = () => {
+        const last = this.tab[this.tab.length-1];
+        this.tab = this.tab.filter(
+            (value, index) => this.tab.length-1 != index
+        )
+        return last;
+    }
+
+    peek = () => {
+        return this.tab[0];
+    }
+
+    //console.log(pushValue());
     /**
      * Créer une structure d'empilement. La structure doit être
      * une classe contenant les méthodes :
@@ -36,6 +71,7 @@ class Stack {
 
 
 const fizzBuzz = (n) => {
+
     /**
      * Affiche les nombres de 1 à n, en remplaçant les multiples de 3 par fizz et
      * les multiples de 5 par buzz
@@ -75,6 +111,9 @@ const spirale = (n) => {
 
 
 const puissance4 = (grid) => {
+    let joueur1;
+    let joueur2;
+
     /**
      * Vérifie si un joueur a gagné au puissance 4,
      * c'est-à-dire s'il a 4 jetons contigus en diagonales, lignes ou colonnes.
