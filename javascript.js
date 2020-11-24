@@ -72,6 +72,27 @@ class Stack {
 
 const fizzBuzz = (n) => {
 
+    for (let i = 1; i <= n; i++)
+    {
+        if (i%3 ===0 && i%5===0)
+        {
+            console.log("fizzbuzz")
+        }
+
+        else if (i%3 ===0)
+        {
+            console.log("fizz");
+        }
+
+        else if(i%5 ===0)
+        {
+            console.log("buzz");
+        }
+        else {
+            console.log(i);
+        }
+    }
+
     /**
      * Affiche les nombres de 1 à n, en remplaçant les multiples de 3 par fizz et
      * les multiples de 5 par buzz
